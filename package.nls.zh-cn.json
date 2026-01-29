@@ -1,0 +1,11 @@
+{
+    "simplify.title": "繁体->简体",
+    "traditionalize.title": "简体->繁体",
+    "translateEn.title": "翻译为英文",
+    "translateToSc.title": "翻译为简体中文",
+    "translateToTc.title": "翻译为繁体中文",
+    "translateToEn.title": "中文->英文",
+    "translateToDe.title": "中文->德文",
+    "translateToVi.title": "中文->越南文",
+    "chineseConverter.menu.label": "中文转换"
+}

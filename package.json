@@ -1,0 +1,161 @@
+{
+    "name": "chinese-converter",
+    "displayName": "Chinese Converter",
+    "description": "VSCode extension for converting between Simplified and Traditional Chinese with multi-language translation support",
+    "version": "1.0.0",
+    "publisher": "uokyi",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "chinese",
+        "converter",
+        "translation",
+        "simplified",
+        "traditional",
+        "i18n"
+    ],
+    "icon": "icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/UokyI/Chinese-Converter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/UokyI/Chinese-Converter/issues"
+    },
+    "homepage": "https://github.com/UokyI/Chinese-Converter/blob/main/README.md",
+    "license": "MIT",
+    "activationEvents": [
+        "onCommand:chineseConverter.simplify",
+        "onCommand:chineseConverter.traditionalize",
+        "onCommand:chineseConverter.translateEn",
+        "onCommand:chineseConverter.translateToSc",
+        "onCommand:chineseConverter.translateToTc",
+        "onCommand:chineseConverter.translateToEn",
+        "onCommand:chineseConverter.translateToDe",
+        "onCommand:chineseConverter.translateToVi",
+        "onCommand:chineseConverter.diagnose"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "chineseConverter.simplify",
+                "title": "%simplify.title%"
+            },
+            {
+                "command": "chineseConverter.traditionalize",
+                "title": "%traditionalize.title%"
+            },
+            {
+                "command": "chineseConverter.translateEn",
+                "title": "%translateEn.title%"
+            },
+            {
+                "command": "chineseConverter.translateToSc",
+                "title": "%translateToSc.title%"
+            },
+            {
+                "command": "chineseConverter.translateToTc",
+                "title": "%translateToTc.title%"
+            },
+            {
+                "command": "chineseConverter.translateToEn",
+                "title": "%translateToEn.title%"
+            },
+            {
+                "command": "chineseConverter.translateToDe",
+                "title": "%translateToDe.title%"
+            },
+            {
+                "command": "chineseConverter.translateToVi",
+                "title": "%translateToVi.title%"
+            },
+            {
+                "command": "chineseConverter.diagnose",
+                "title": "诊断环境状态"
+            }
+        ],
+        "submenus": [
+            {
+                "id": "chineseConverter.menu",
+                "label": "%chineseConverter.menu.label%"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "submenu": "chineseConverter.menu",
+                    "when": "editorHasSelection",
+                    "group": "1_modification"
+                }
+            ],
+            "chineseConverter.menu": [
+                {
+                    "command": "chineseConverter.simplify",
+                    "when": "editorHasSelection",
+                    "group": "1_simplify"
+                },
+                {
+                    "command": "chineseConverter.traditionalize",
+                    "when": "editorHasSelection",
+                    "group": "2_traditionalize"
+                },
+                {
+                    "command": "chineseConverter.translateToEn",
+                    "when": "editorHasSelection",
+                    "group": "4_chinese_en"
+                },
+                {
+                    "command": "chineseConverter.translateToDe",
+                    "when": "editorHasSelection",
+                    "group": "4_chinese_de"
+                },
+                {
+                    "command": "chineseConverter.translateToVi",
+                    "when": "editorHasSelection",
+                    "group": "4_chinese_vi"
+                },
+                {
+                    "command": "chineseConverter.translateEn",
+                    "when": "editorHasSelection",
+                    "group": "5_translate_en"
+                },
+                {
+                    "command": "chineseConverter.translateToSc",
+                    "when": "editorHasSelection",
+                    "group": "5_translate_sc"
+                },
+                {
+                    "command": "chineseConverter.translateToTc",
+                    "when": "editorHasSelection",
+                    "group": "5_translate_tc"
+                },
+                {
+                    "command": "chineseConverter.diagnose",
+                    "when": "editorHasSelection",
+                    "group": "9_diagnose"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node scripts/install.js",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "@types/node": "14.x"
+    },
+    "dependencies": {
+        "python-shell": "^3.0.1"
+    },
+    "galleryBanner": {
+        "color": "#ffffff",
+        "theme": "light"
+    }
+}

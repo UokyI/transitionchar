@@ -1,0 +1,11 @@
+{
+    "simplify.title": "Traditional -> Simplified",
+    "traditionalize.title": "Simplified -> Traditional",
+    "translateEn.title": "Translate to English",
+    "translateToSc.title": "Translate to Simplified Chinese",
+    "translateToTc.title": "Translate to Traditional Chinese",
+    "translateToEn.title": "Chinese -> English",
+    "translateToDe.title": "Chinese -> German",
+    "translateToVi.title": "Chinese -> Vietnamese",
+    "chineseConverter.menu.label": "Chinese Conversion"
+}

@@ -1,0 +1,25 @@
+# 忽略开发相关文件
+.git
+.gitignore
+.vscode
+*.md
+*.log
+.DS_Store
+Thumbs.db
+
+# 忽略开发依赖（保留生产依赖）
+node_modules/@types/
+node_modules/.bin/
+
+# 忽略Python缓存（保留converter.py主脚本）
+__pycache__/
+*.pyc
+*.pyo
+
+# 忽略测试文件
+test_*.py
+*_test.py
+
+# 忽略临时文件
+*.tmp
+*.temp
